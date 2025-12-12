@@ -37,27 +37,5 @@ include-package-data = true
 where = ["."]
 include = ["whisperx*"]
 
-[tool.uv.sources]
-torch = [
-  { index = "pytorch-cpu", marker = "sys_platform == 'darwin'" },
-  { index = "pytorch-cpu", marker = "platform_machine != 'x86_64' and sys_platform != 'darwin'" },
-  { index = "pytorch", marker = "platform_machine == 'x86_64' and sys_platform != 'darwin'" },
-]
-torchaudio = [
-  { index = "pytorch-cpu", marker = "sys_platform == 'darwin'" },
-  { index = "pytorch-cpu", marker = "platform_machine != 'x86_64' and sys_platform != 'darwin'" },
-  { index = "pytorch", marker = "platform_machine == 'x86_64' and sys_platform != 'darwin'" },
-]
-triton = [
-  { index = "pytorch", marker = "sys_platform == 'linux'" },
-]
-
-[[tool.uv.index]]
-name = "pytorch"
-url = "https://download.pytorch.org/whl/cu128"
-explicit = true
-
-[[tool.uv.index]]
-name = "pytorch-cpu"
-url = "https://download.pytorch.org/whl/cpu"
-explicit = true
+# Note: uv index configuration removed - parent project (whisperx-api) provides index config
+# This allows the fork to be used as a dependency without index conflicts
