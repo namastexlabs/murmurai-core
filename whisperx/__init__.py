@@ -1,3 +1,7 @@
+# Load compatibility patches FIRST before any other imports
+# This patches torch 2.6+, pyannote 4.x, torchaudio 2.9+
+from whisperx import compat as _compat  # noqa: F401
+
 import importlib
 
 

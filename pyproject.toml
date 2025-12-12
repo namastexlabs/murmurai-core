@@ -1,28 +1,26 @@
 [project]
-urls = { repository = "https://github.com/m-bain/whisperx" }
-authors = [{ name = "Max Bain" }]
+urls = { repository = "https://github.com/namastexlabs/whisperX" }
+authors = [{ name = "Max Bain" }, { name = "Namastex Labs" }]
 name = "whisperx"
-version = "3.7.4"
-description = "Time-Accurate Automatic Speech Recognition using Whisper."
+version = "3.7.4+namastex.1"
+description = "Time-Accurate Automatic Speech Recognition using Whisper. (Namastex fork with pyannote 4.x support)"
 readme = "README.md"
-requires-python = ">=3.9, <3.14"
+requires-python = ">=3.12, <3.14"
 license = { text = "BSD-2-Clause" }
 
 dependencies = [
     "ctranslate2>=4.5.0",
     "faster-whisper>=1.1.1",
     "nltk>=3.9.1",
-    # Restrict numpy, onnxruntime, pandas, av to be compatible with Python 3.9
-    "numpy>=2.0.2,<2.1.0; python_version <'3.13'",
-    "onnxruntime>=1.19,<1.20.0; python_version <'3.10'",
+    "numpy>=2.1.0,<2.3.0",
     "pandas>=2.2.3,<2.3.0",
     "av<16.0.0",
-    "numpy>=2.1.0,<2.3.0; python_version >='3.13'",
-    "pyannote-audio>=3.3.2,<4.0.0",
-    "torch~=2.8.0",
-    "torchaudio~=2.8.0",
+    # Modernized: pyannote 4.x, torch 2.8+, torchaudio 2.8+
+    "pyannote-audio>=4.0",
+    "torch>=2.8.0",
+    "torchaudio>=2.8.0",
     "transformers>=4.48.0",
-    "triton>=3.3.0; sys_platform == 'linux' and platform_machine == 'x86_64'" # only install triton on x86_64 Linux
+    "triton>=3.3.0; sys_platform == 'linux' and platform_machine == 'x86_64'"
 ]
 
 
