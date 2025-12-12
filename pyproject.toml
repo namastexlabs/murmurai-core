@@ -1,7 +1,7 @@
 [project]
 name = "murmurai-core"
 version = "1.0.0"
-description = "Modern speech recognition with word-level timestamps and speaker diarization. Fork of whisperX with torch 2.6+, pyannote 4.x compatibility."
+description = "Modern speech recognition with word-level timestamps and speaker diarization. Fork of WhisperX with torch 2.6+, pyannote 4.x compatibility."
 readme = "README.md"
 requires-python = ">=3.10, <3.14"
 license = {text = "BSD-2-Clause"}
