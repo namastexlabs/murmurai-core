@@ -23,6 +23,7 @@ dependencies = [
     "pyannote-audio>=4.0",
     "torch>=2.9.0",
     "torchaudio>=2.9.0",
+    "torchcodec>=0.8.1",
     "transformers>=4.50.0",
 ]
 
