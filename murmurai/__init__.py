@@ -2,7 +2,7 @@
 # This patches torch 2.6+, pyannote 4.x, torchaudio 2.9+
 from murmurai import compat as _compat  # noqa: F401
 
-__version__ = "1.0.5-rc.1"
+__version__ = "1.0.5"
 
 import importlib
 
